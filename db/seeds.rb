@@ -11,7 +11,7 @@ puts "Deleting all tasks"
 Task.destroy_all
 puts "Creating 10 tasks"
 36.times do
-  tasks = Task.new(title: Faker::Hipster.sentence, details: Faker::ChuckNorris.fact, completed: [true, false].sample)
+  tasks = Task.new(title: Faker::HowIMetYourMother.catch_phrase, details: Faker::ChuckNorris.fact, completed: [true, false].sample)
   if tasks.save
     puts tasks.title + " created!"
   end

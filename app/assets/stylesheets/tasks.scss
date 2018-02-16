@@ -7,4 +7,73 @@
 body {
   font-family: 'Lato', sans-serif;
   padding: 20px;
+  color: #3a3a3a;
 }
+
+.done {
+  color: #24d01c;
+}
+
+.not-done {
+  color: #d62020;
+}
+
+.grid {
+  display: grid;
+  border-radius: 6px;
+  grid-template-columns: 1fr 1fr 4fr 16fr;
+  grid-template-rows: 80px;
+  margin-bottom: 12px;
+  box-shadow: 1px 2px 5px -2px #a5a5a5;
+  transition: all 0.3s cubic-bezier(0.05, 0.98, 0.76, 0.99);
+}
+
+.grid:hover {
+  background-color: #efefef;
+}
+
+.grid-item {
+  margin: auto;
+}
+
+.left {
+  text-align: left;
+}
+
+.task_wrapper {
+  margin-bottom: 6px;
+  min-height: 36px;
+}
+.task {
+  text-decoration: none;
+}
+
+.link_to {
+  text-decoration: none;
+  color: #4ea6ec;
+  font-size: 20px;
+  padding: 0px 10px;
+}
+
+.call-to-action {
+  text-decoration: none;
+  background-color: #FF6B6B;
+  color: white;
+  padding: 10px;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.edit-btn {
+  background-color: #47baff;
+}
+
+.back-btn {
+  background-color: #b7b7b7;
+}
+
+.large {
+  font-size: 36px;
+}
+
+

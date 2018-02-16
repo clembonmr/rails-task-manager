@@ -1,0 +1,13 @@
+
+
+  <h1><%= @task.title %></h1>
+  <% if @task.completed %>
+    <i class="fas fa-check-circle done"></i>
+  <% else %>
+    <i class="far fa-circle not-done"></i>
+  <% end %>
+  <p><%= @task.details %></p>
+  <%= link_to 'Edit this task', edit_task_path, class: 'call-to-action edit-btn' %>
+  <%= link_to 'Delete this task', delete_task_path, method: :delete, class: 'call-to-action' %>
+  <%= link_to 'Back to Tasks list', tasks_path, class: 'call-to-action back-btn' %>
+

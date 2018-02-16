@@ -1,16 +1,29 @@
 
 <h1>List of Tasks</h1>
+<%= link_to "Create a new task", new_task_path, class: 'link_to' %>
 
-<ul>
-  <% @tasks.each do |task| %>
-  <div>
-    <% if task.completed %>
-      <i class="fas fa-check-circle"></i>
-    <% else %>
-      <i class="far fa-circle"></i>
-    <% end %>
-    <p><strong>ID: <%= task.id %> | <%= task.title %></strong></p>
-    <p><%= task.details %></p>
+<% @tasks.each do |task| %>
+  <div class="task_wrapper">
+    <div class="grid">
+
+      <div class="grid-item">
+        <% if task.completed %>
+          <i class="fas fa-check-circle done large"></i>
+        <% else %>
+          <i class="far fa-circle not-done large"></i>
+        <% end %>
+      </div>
+      <div class="grid-item">
+        <%= link_to delete_task_path(task.id), method: :delete do %>
+          <i class="fas fa-trash link_to large"></i>
+        <% end %>
+      </div>
+      <div class="grid-item left">
+        <%= link_to task.title, task_path(task.id), class: 'link_to' %>
+      </div>
+
+      <div class="grid-item left"><%= task.details %></div>
+
+    </div>
   </div>
-  <% end %>
-</ul>
+<% end %>
